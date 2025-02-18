@@ -35,7 +35,7 @@ export function Header() {
         <Container>
           <div className="flex items-center justify-center">
             <div>
-              <Button variant="secondary">Inicio</Button>
+              <Button variant="secondary">Home</Button>
             </div>
           </div>
         </Container>
