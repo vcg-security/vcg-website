@@ -1,27 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
+import { Button } from "./ui/button";
+import { ShoppingCartIcon } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="bg-black">
-      <Container>
-        <div className="flex items-center justify-between">
-          <Image
-            src="https://images.ctfassets.net/gsfj8g0zut06/5TTjeblvpN1MzupiK3qfPR/1e9de7dc9c304eb1659e6d7294f517cf/Logo.png"
-            alt="Logo"
-            width={100}
-            height={100}
-          />
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </Container>
+    <header>
+      <div className="bg-gray-950">
+        <Container>
+          <div className="flex items-center justify-end">
+            <Button variant="ghost" size="icon" className="text-white">
+              <ShoppingCartIcon />
+            </Button>
+          </div>
+        </Container>
+      </div>
+      <div className="bg-black py-4">
+        <Container>
+          <div className="flex items-center justify-center">
+            <Link href="/">
+              <Image
+                src="https://images.ctfassets.net/gsfj8g0zut06/1JhtylnPUef0jQU4CPurCZ/afb8cedf38352040e39575d30813f6ba/Logo-Blanco---Sin-Fondo.webp"
+                alt="Logo"
+                width={300}
+                height={100}
+                className="w-64"
+              />
+            </Link>
+          </div>
+        </Container>
+      </div>
+      <div className="bg-gray-950">
+        <Container>
+          <div className="flex items-center justify-center">
+            <div>
+              <Button variant="secondary">Inicio</Button>
+            </div>
+          </div>
+        </Container>
+      </div>
     </header>
   );
 }
