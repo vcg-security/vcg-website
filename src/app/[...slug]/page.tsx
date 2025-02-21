@@ -34,14 +34,12 @@ export async function generateMetadata({ params }: Props) {
   const page = await getPageBySlug(slug);
   if (!page) notFound();
 
-  const seo = page.fields.seo?.fields;
-
   return {
-    title: seo?.pageTitle + " | VCG Security",
-    description: seo?.pageDescription,
+    title: page.fields.title + " | VCG Security",
+    description: page.fields.seoDescription,
     openGraph: {
-      title: seo?.pageTitle + " | VCG Security",
-      description: seo?.pageDescription,
+      title: page.fields.title + " | VCG Security",
+      description: page.fields.seoDescription,
     },
   };
 }
@@ -50,11 +48,9 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
 
   const page = await getPageBySlug(slug);
-  const blocks = page?.fields.blocks || [];
+  if (!page) notFound();
 
-  if (!page) {
-    notFound();
-  }
+  const blocks = page?.fields.blocks || [];
 
   return (
     <main className="space-y-10 my-10">
