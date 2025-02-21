@@ -3,11 +3,15 @@ import { Document, Block, Text } from "@contentful/rich-text-types";
 import { cn } from "@/lib/utils";
 
 interface Props {
-  block: Entry<EntrySkeletonType, "WITHOUT_UNRESOLVABLE_LINKS", string>;
+  fields: Entry<
+    EntrySkeletonType,
+    "WITHOUT_UNRESOLVABLE_LINKS",
+    string
+  >["fields"];
 }
 
-export function ComponentRichText({ block }: Props) {
-  const content = (block.fields.text as Document)?.content;
+export function ComponentRichText({ fields }: Props) {
+  const content = (fields.text as Document)?.content;
 
   const renderNode = (node: Block) => {
     switch (node.nodeType) {

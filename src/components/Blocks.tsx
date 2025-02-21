@@ -11,8 +11,9 @@ interface ContentfulBlockProps {
   block: ContentfulBlockType;
 }
 
-export function ContentfulBlock({ block }: ContentfulBlockProps) {
-  switch (block?.sys?.contentType?.sys?.id) {
+function ContentfulBlock({ block }: ContentfulBlockProps) {
+  console.log(block);
+  switch (block?.sys.contentType.sys.id) {
     case "componentRichText":
       return <ComponentRichText fields={block?.fields} />;
     case "componentAccordion":
@@ -29,10 +30,10 @@ interface Props {
 }
 export function ContentfulBlocks({ blocks }: Props) {
   return (
-    <main className="">
+    <>
       {blocks.map((block) => (
         <ContentfulBlock key={block?.sys.id} block={block} />
       ))}
-    </main>
+    </>
   );
 }

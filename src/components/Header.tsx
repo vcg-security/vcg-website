@@ -31,13 +31,14 @@ export function Header() {
           </div>
         </Container>
       </div>
-      <div className="bg-gray-950">
-        <Container>
-          <div className="flex items-center justify-center">
-            <div>
-              <Button variant="secondary">Home</Button>
-            </div>
-          </div>
+      <div className="bg-gray-950 py-2">
+        <Container className="flex items-center justify-center gap-4">
+          <Button variant="secondary">Inicio</Button>
+          <Link href="/quienes-somos">
+            <Button variant="secondary">Quienes somos</Button>
+          </Link>
+          <Button variant="secondary">Home</Button>
+          <Button variant="secondary">Home</Button>
         </Container>
       </div>
     </header>
