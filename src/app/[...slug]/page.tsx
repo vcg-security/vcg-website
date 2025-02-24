@@ -1,5 +1,5 @@
+import { Blocks } from "@/components/Blocks";
 import { Container } from "@/components/Container";
-import { ContentfulBlocks } from "@/components/ContentfulSwitcher";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -69,7 +69,8 @@ export default async function Page({ params }: Props) {
           </BreadcrumbList>
         </Breadcrumb>
       </Container>
-      <ContentfulBlocks blocks={blocks} />
+
+      <Blocks blocks={blocks} />
     </main>
   );
 }

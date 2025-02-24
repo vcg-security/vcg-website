@@ -1,4 +1,4 @@
-import { ContentfulBlocks } from "@/components/ContentfulSwitcher";
+import { Blocks } from "@/components/Blocks";
 import { contentfulClient } from "@/config/contentful";
 import { TypePagesSkeleton } from "@/contentful-types";
 
@@ -11,7 +11,5 @@ export default async function Home() {
   const page = entries.items[0];
   const blocks = page?.fields.blocks || [];
 
-  console.log(blocks);
-
-  return <ContentfulBlocks blocks={blocks} />;
+  return <Blocks blocks={blocks} />;
 }

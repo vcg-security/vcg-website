@@ -10,8 +10,6 @@ interface Props {
 }
 
 export function Component5050({ fields }: Props) {
-  console.log({ fields });
-
   return (
     <section>
       <Container className="grid grid-cols-2 gap-4">
