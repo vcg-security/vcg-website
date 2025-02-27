@@ -150,26 +150,38 @@ export function Footer({ menu }: Props) {
             Copyright © 2025 VCG Security. Todos los derechos reservados.
           </Typography>
           <div className="flex items-center gap-2">
-            <Link href="/">
+            <a
+              href="https://www.facebook.com/profile.php?id=615727663750"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="secondary" size="icon">
                 <FacebookIcon />
               </Button>
-            </Link>
-            <Link href="/">
+            </a>
+            <a
+              href="https://www.instagram.com/vcgsecurity/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="secondary" size="icon">
                 <InstagramIcon />
               </Button>
-            </Link>
-            <Link href="/">
+            </a>
+            <a href="/" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="icon">
                 <YoutubeIcon />
               </Button>
-            </Link>
-            <Link href="/">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/icarvallovvintimilla/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="secondary" size="icon">
                 <LinkedinIcon />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </Container>
