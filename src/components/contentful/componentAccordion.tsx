@@ -16,6 +16,7 @@ interface Props {
 }
 
 export function ComponentAccordion({ fields }: Props) {
+  console.log(fields);
   return (
     <div>
       <Accordion type="single">
