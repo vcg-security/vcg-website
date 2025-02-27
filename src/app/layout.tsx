@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Titillium_Web } from "next/font/google";
 import "./globals.css";
-// import { Header } from "@/components/Header";
-// import { Footer } from "@/components/Footer";
 import { Header2 } from "@/components/Header2";
+import { Footer } from "@/components/Footer";
 import { contentfulClient } from "@/config/contentful";
 import { TypeHeaderMenuSkeleton } from "@/contentful-types";
 
@@ -47,7 +46,7 @@ export default async function RootLayout({
       >
         <Header2 menu={menu} />
         {children}
-        {/* <Footer /> */}
+        <Footer menu={menu} />
       </body>
     </html>
   );

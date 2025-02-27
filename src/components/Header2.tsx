@@ -84,19 +84,6 @@ export function Header2({ menu }: Props) {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                            {item?.fields.image && (
-                              <li className="row-span-3">
-                                <Image
-                                  className="w-full h-full object-cover rounded-lg"
-                                  src={contentfulImageUrl(
-                                    item?.fields.image?.fields.file?.url
-                                  )}
-                                  alt={item?.fields.name}
-                                  width={100}
-                                  height={100}
-                                />
-                              </li>
-                            )}
                             {item?.fields.subItems.map((subItem) => (
                               <ListItem
                                 key={subItem?.sys.id}
