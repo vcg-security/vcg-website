@@ -11,6 +11,8 @@ import { contentfulClient } from "@/config/contentful";
 import { TypePagesSkeleton } from "@/contentful-types";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 async function getPageBySlug(slug: string) {
   try {
     const entries = await contentfulClient.getEntries<TypePagesSkeleton>({
