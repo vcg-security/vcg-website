@@ -59,6 +59,8 @@ export default async function Page({ params }: Props) {
 
   const blocks = page?.fields.blocks || [];
 
+  console.log(blocks);
+
   return (
     <main className="space-y-10 my-10">
       <Container>
