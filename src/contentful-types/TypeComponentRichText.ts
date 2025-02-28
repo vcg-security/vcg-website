@@ -7,6 +7,7 @@ import type {
 } from "contentful";
 
 export interface TypeComponentRichTextFields {
+  internalName: EntryFieldTypes.Symbol;
   text: EntryFieldTypes.RichText;
 }
 
