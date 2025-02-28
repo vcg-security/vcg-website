@@ -6,7 +6,6 @@ import { Carousel } from "../ui/carousel";
 import { TypeComponentCarouselGallerySkeleton } from "@/contentful-types";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
-import { contentfulImageUrl } from "@/lib/contentful-image-url";
 
 interface Props {
   fields: Entry<
@@ -42,7 +41,7 @@ export function ComponentCarouselGallery({ fields }: Props) {
                 className="pl-4 lg:basis-1/6 flex items-center justify-center"
               >
                 <Image
-                  src={contentfulImageUrl(image?.fields?.file?.url)}
+                  src={image?.fields?.file?.url || ""}
                   alt={image?.fields.title || ""}
                   width={100}
                   height={100}

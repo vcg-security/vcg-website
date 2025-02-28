@@ -3,6 +3,7 @@ export type { TypeComponentAccordion, TypeComponentAccordionFields, TypeComponen
 export type { TypeComponentAccordionItem, TypeComponentAccordionItemFields, TypeComponentAccordionItemSkeleton } from "./TypeComponentAccordionItem";
 export type { TypeComponentCarousel, TypeComponentCarouselFields, TypeComponentCarouselSkeleton } from "./TypeComponentCarousel";
 export type { TypeComponentCarouselGallery, TypeComponentCarouselGalleryFields, TypeComponentCarouselGallerySkeleton } from "./TypeComponentCarouselGallery";
+export type { TypeComponentImage, TypeComponentImageFields, TypeComponentImageSkeleton } from "./TypeComponentImage";
 export type { TypeComponentRichImage, TypeComponentRichImageFields, TypeComponentRichImageSkeleton } from "./TypeComponentRichImage";
 export type { TypeComponentRichText, TypeComponentRichTextFields, TypeComponentRichTextSkeleton } from "./TypeComponentRichText";
 export type { TypeHeaderMenu, TypeHeaderMenuFields, TypeHeaderMenuSkeleton } from "./TypeHeaderMenu";

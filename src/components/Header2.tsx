@@ -16,7 +16,6 @@ import {
 } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
-// import { contentfulImageUrl } from "@/lib/contentful-image-url";
 
 const ListItem = forwardRef<
   React.ElementRef<"a">,

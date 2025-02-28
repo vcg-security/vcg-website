@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Titillium_Web } from "next/font/google";
 import "./globals.css";
-import { Header2 } from "@/components/Header2";
+// import { Header2 } from "@/components/Header2";
 import { Footer } from "@/components/Footer";
 import { contentfulClient } from "@/config/contentful";
 import { TypeHeaderMenuSkeleton } from "@/contentful-types";
+import { Header3 } from "@/components/Header3";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,8 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${titilliumWeb.variable} antialiased`}
       >
-        <Header2 menu={menu} />
+        {/* <Header2 menu={menu} /> */}
+        <Header3 menu={menu} />
         {children}
         <Footer menu={menu} />
       </body>

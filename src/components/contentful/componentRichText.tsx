@@ -1,6 +1,7 @@
 import { Entry, EntrySkeletonType } from "contentful";
 import { Document, Block, Text } from "@contentful/rich-text-types";
 import { cn } from "@/lib/utils";
+import { Typography } from "../Typography";
 
 interface Props {
   fields: Entry<
@@ -17,16 +18,29 @@ export function ComponentRichText({ fields }: Props) {
     switch (node.nodeType) {
       case "heading-1":
         return (
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <Typography variant="h1" className="mb-8">
             {(node.content[0] as Text).value}
-          </h1>
+          </Typography>
         );
       case "heading-2":
         return (
-          <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+          <Typography variant="h2">
             {(node.content[0] as Text).value}
-          </h2>
+          </Typography>
         );
+      case "heading-3":
+        return (
+          <Typography variant="h3">
+            {(node.content[0] as Text).value}
+          </Typography>
+        );
+      case "heading-4":
+        return (
+          <Typography variant="h4">
+            {(node.content[0] as Text).value}
+          </Typography>
+        );
+
       case "paragraph":
         const marks = (node.content[0] as Text).marks;
         const text = (node.content[0] as Text).value;
@@ -34,15 +48,12 @@ export function ComponentRichText({ fields }: Props) {
         const isItalic = marks?.some((mark) => mark.type === "italic");
 
         return (
-          <p
-            className={cn(
-              "leading-7 [&:not(:first-child)]:mt-6",
-              isBold && "font-bold",
-              isItalic && "italic"
-            )}
+          <Typography
+            variant="p"
+            className={cn("mb-4", isBold && "font-bold", isItalic && "italic")}
           >
             {text}
-          </p>
+          </Typography>
         );
       case "unordered-list":
         return (

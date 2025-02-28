@@ -31,30 +31,25 @@ export function Footer({ menu }: Props) {
   const servicesSubItems = services?.fields.subItems;
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white py-20">
       <Container>
-        <div className="flex items-center justify-center py-10 md:py-20">
-          <Link
-            href="/"
-            className="hover:opacity-80 hover:scale-105 transition-all"
-          >
-            <Image
-              src="https://images.ctfassets.net/gsfj8g0zut06/1JhtylnPUef0jQU4CPurCZ/afb8cedf38352040e39575d30813f6ba/Logo-Blanco---Sin-Fondo.webp"
-              alt="Logo"
-              width={300}
-              height={100}
-              className="w-52"
-            />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10 mx-10 md:mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-20 mx-10 md:mx-0">
           <div>
-            <Typography variant="h3-underline">Misión</Typography>
+            <Link
+              href="/"
+              className="hover:opacity-80 hover:scale-105 transition-all"
+            >
+              <Image
+                src="//images.ctfassets.net/gsfj8g0zut06/1JhtylnPUef0jQU4CPurCZ/afb8cedf38352040e39575d30813f6ba/Logo-Blanco---Sin-Fondo.webp"
+                alt="Logo"
+                width={300}
+                height={100}
+                className="w-52"
+              />
+            </Link>
             <Typography variant="p">
-              “En VCG Security entendemos que el cliente y su seguridad son
-              nuestra razón de ser”. Además de mantener nuestra Filosofía
-              Organizacional “En donde salvar una vida es salvar una familia y
-              salvar una familia es salvar la sociedad”.
+              En VCG Security entendemos que el cliente y su seguridad son
+              nuestra razón de ser.
             </Typography>
           </div>
           <div>

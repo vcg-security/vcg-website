@@ -1,21 +1,24 @@
-import { Entry, EntrySkeletonType } from "contentful";
+import { Entry } from "contentful";
 import { Container } from "../Container";
+import { TypeComponent5050Skeleton } from "@/contentful-types";
+import { ContentfulBlock } from "../Blocks";
 
 interface Props {
   fields: Entry<
-    EntrySkeletonType,
+    TypeComponent5050Skeleton,
     "WITHOUT_UNRESOLVABLE_LINKS",
     string
   >["fields"];
 }
 
 export function Component5050({ fields }: Props) {
-  console.log(fields);
+  const content = fields.content;
+
   return (
     <section>
-      <Container className="grid grid-cols-2 gap-4">
-        <div>{/* <ContentfulBlock block={fields} /> */}</div>
-        <div>2</div>
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <ContentfulBlock block={content[0]} />
+        <ContentfulBlock block={content[1]} />
       </Container>
     </section>
   );
