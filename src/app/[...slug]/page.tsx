@@ -12,13 +12,18 @@ import { TypePagesSkeleton } from "@/contentful-types";
 import { notFound } from "next/navigation";
 
 async function getPageBySlug(slug: string) {
-  const entries = await contentfulClient.getEntries<TypePagesSkeleton>({
-    content_type: "pages",
-    "fields.slug": slug,
-    include: 2,
-  });
+  try {
+    const entries = await contentfulClient.getEntries<TypePagesSkeleton>({
+      content_type: "pages",
+      "fields.slug": slug,
+      include: 2,
+    });
 
-  return entries.items[0];
+    return entries.items[0];
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
 
 interface Params {
