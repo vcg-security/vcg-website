@@ -49,6 +49,7 @@ interface Props {
 }
 
 export function Header3({ menu }: Props) {
+  if (!menu) return null;
   return (
     <header className="bg-black relative">
       <div className="bg-gray-950">

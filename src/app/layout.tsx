@@ -38,7 +38,7 @@ export default async function RootLayout({
     include: 2,
   });
 
-  const menu = entries.items[0];
+  const menu = entries.items[0] || null;
 
   return (
     <html lang="en">

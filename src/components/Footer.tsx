@@ -20,6 +20,8 @@ interface Props {
   menu: Entry<TypeHeaderMenuSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>;
 }
 export function Footer({ menu }: Props) {
+  if (!menu) return null;
+
   const aboutUs = menu.fields.items.find(
     (item) => item?.fields.name === "Nosotros"
   );
