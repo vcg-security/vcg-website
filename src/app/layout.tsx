@@ -11,17 +11,23 @@ import { Entry } from "contentful";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium-web",
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
