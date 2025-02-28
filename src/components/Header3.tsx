@@ -97,7 +97,7 @@ export function Header3({ menu }: Props) {
                         {item?.fields.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid gap-1 p-4 md:w-[500px] lg:w-[700px] lg:grid-cols-[.75fr_1fr]">
+                        <ul className="grid gap-1 p-4 md:w-[500px] lg:w-[700px] lg:grid-cols-2">
                           {item?.fields.subItems.map((subItem) => (
                             <ListItem
                               key={subItem?.sys.id}
