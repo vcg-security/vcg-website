@@ -1,20 +1,18 @@
-import Image from "next/image";
-import { Container } from "@/components/Container";
-
 export default function NotFound() {
   return (
-    <Container>
-      <div className="flex min-h-[50vh] w-full items-center justify-center flex-col gap-8">
-        <h1 className="text-4xl font-bold">Página no encontrada</h1>
-        <Image
-          src="//images.ctfassets.net/gsfj8g0zut06/1aHsaVp3O60ItoBHHyZCjX/9ee1181dade8fb3f385e4a907664ca4b/5203299.jpg"
-          alt="404"
-          width={800}
-          height={800}
-          className="w-[400px] h-[400px] object-contain"
-          priority
-        />
+    <div className="flex min-h-[70vh] w-full items-center justify-center flex-col gap-8 p-8">
+      <div className="max-w-md mx-auto text-center">
+        <h1 className="text-4xl font-bold mb-4">Página no encontrada</h1>
+        <p className="text-gray-600 mb-8">
+          Lo sentimos, no pudimos encontrar la página que estás buscando.
+        </p>
+        <a
+          href="/"
+          className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800"
+        >
+          Volver al inicio
+        </a>
       </div>
-    </Container>
+    </div>
   );
 }
