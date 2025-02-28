@@ -17,7 +17,11 @@ import {
 import { Button } from "./ui/button";
 
 interface Props {
-  menu: Entry<TypeHeaderMenuSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>;
+  menu: Entry<
+    TypeHeaderMenuSkeleton,
+    "WITHOUT_UNRESOLVABLE_LINKS",
+    string
+  > | null;
 }
 export function Footer({ menu }: Props) {
   if (!menu) return null;

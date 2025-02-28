@@ -45,7 +45,11 @@ const ListItem = forwardRef<
 ListItem.displayName = "ListItem";
 
 interface Props {
-  menu: Entry<TypeHeaderMenuSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>;
+  menu: Entry<
+    TypeHeaderMenuSkeleton,
+    "WITHOUT_UNRESOLVABLE_LINKS",
+    string
+  > | null;
 }
 
 export function Header3({ menu }: Props) {
